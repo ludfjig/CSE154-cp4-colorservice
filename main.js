@@ -2,16 +2,14 @@
 // Date: 03/30/2019
 // Section: CSE 154AF
 //
-// This script makes use of the fetch api to query service.php for colors
+// This script makes use of the fetch api to query the api colors.php for colors
 // using a string entered by the user. The resulting colors are displayed to the user in either
 // text format or as a div, depending on what radio button the user clicked.
-//
 
 (function() {
   "use strict";
-  const BASE_URL = "service.php";
+  const BASE_URL = "colors.php";
   const ERROR_MSG = "OOPS! An error occured when accessing the the color webservice...";
-
 
   window.addEventListener("load", init);
 
@@ -23,7 +21,7 @@
   }
 
   /**
-   * Retrieves information about a color from webservice.php's api and displays it to the user.
+   * Retrieves information about a color from colors.php's api and displays it to the user.
    * Removes all previously displayed colors. Depending on what radio button the user
    * selected, the content is displayed as paragraph element, or a colored div. Displays
    * an error message if the fetch goes wrong.

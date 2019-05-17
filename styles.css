@@ -1,9 +1,16 @@
 /*  Name: Ludvig Liljenberg
-    Date: 04/30/2019
+    Date: 05/16/2019
     Section: CSE 154AF
 
     This stylesheet styles the index.html page. It gives it an animated dark
-    grandient background, with most elements having a white borer. */
+    grandient background, with most elements having a white border. Please
+    note i did not include classes for each color, as I wanted it to be easy
+    to quickly add new colors (by only easily adding a .txt file in the "colors" folder.)
+    Additionally, in you feedback for cp3, you said to leave space after colon
+    for pseudo-selectors. However, if I leave a space, the css will not function properly.
+    This is how MDN does it. Thanks :)
+*/
+
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 @keyframes Smooth {
@@ -84,11 +91,11 @@ button {
   height: 40px;
 }
 
-button :active {
+button:active {
   background-color: #ffb2b2;
 }
 
-a, a :visited {
+a, a:visited {
   font-size: 15px;
   color: cyan;
 }
