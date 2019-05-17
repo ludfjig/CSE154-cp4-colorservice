@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+     Name: Ludvig Liljenberg
+     Date: 05/16/2019
+     Section: CSE 154AF
+
+     On this website, the user can search for different colors. The given color will
+     be displayed as a new div with that color, if the radio button "json" is checked. otherwise
+     a paragraph will be created and dislpayed to the user, containing information about the
+     given color.
+-->
+
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8" />
+  <title>PHP color searcher</title>
+  <script src="main.js"></script>
+  <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <h1>PHP<a href="https://www.wikipedia.org/">(Descriptions of colors
+        provided by Wikipedia)</a></h1>
+    <section>
+      <div>
+        <!--This div is not redundant. It makes the button and text appear
+              next to each other. There is no fitting semantic tag-->
+        <label>Search for a color (or try "all"):
+          <input type="text" name="title" placeholder="Enter a color" />
+        </label>
+
+
+        <label>JSON
+          <input type="radio" name="group" value="json" checked />
+        </label>
+
+        <label>TEXT
+          <input type="radio" name="group" value="text" />
+        </label>
+
+        <button type="button">Search!</button>
+      </div>
+    </section>
+  </header>
+  <main>
+    <h2>Results:</h2>
+    <article></article>
+  </main>
+</body>
+
+</html>

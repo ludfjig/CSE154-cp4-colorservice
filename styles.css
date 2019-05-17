@@ -1,0 +1,101 @@
+/*  Name: Ludvig Liljenberg
+    Date: 04/30/2019
+    Section: CSE 154AF
+
+    This stylesheet styles the index.html page. It gives it an animated dark
+    grandient background, with most elements having a white borer. */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+@keyframes Smooth {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+body {
+  background: linear-gradient(222deg, #000000, #848484);
+  background-size: 300% 300%;
+  animation: Smooth 26s ease infinite;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  background-attachment: fixed;
+}
+
+body, button, input {
+  font-family: Raleway, sans-serif;
+}
+
+body, button {
+  color: white;
+}
+
+main div, section, article {
+  display: flex;
+}
+
+section, main div {
+  border: 5px solid white;
+  border-radius: 10px;
+  background-color: gray;
+  align-items: center;
+}
+
+article {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+main div {
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  flex-direction: column;
+}
+
+section {
+  height: 50px;
+  padding: 30px;
+  justify-content: space-around;
+}
+
+h3 {
+  text-decoration: underline;
+  text-shadow: 1px 1px 4px black;
+  font-size: 16pt;
+}
+
+button {
+  background-color: #ff3030;
+  border: 0;
+  border-bottom: 5px solid #942b2b;
+  border-radius: 3px;
+  width: 80px;
+  height: 40px;
+}
+
+button :active {
+  background-color: #ffb2b2;
+}
+
+a, a :visited {
+  font-size: 15px;
+  color: cyan;
+}
+
+p {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}

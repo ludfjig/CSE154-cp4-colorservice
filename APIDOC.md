@@ -1,8 +1,8 @@
-# *FILL IN NAME* API Documentation
+# Color API Documentation
 *Fill in a short description here about the API's purpose.*
 
-## *Fill in Endpoint 1 Title*
-**Request Format:** *Fill in example request format*
+## Get a json object containing all colors in this service.
+**Request Format:** service.php?color=all&mode=json
 
 **Request Type:** GET
 
