@@ -93,38 +93,6 @@
     return colorDiv;
   }
 
-  /**
-   * Creates a "card" html element for every movie in the given json object,
-   * and displays them to the user.
-   * @param  {JSONobject} jsonResponse - the json object containing movies.
-   * @return {Number} Number of movies in the given JSON object.
-   */
-  function createMovieCards(jsonResponse) {
-    let movies = jsonResponse.results;
-    for (let i = 0; i < movies.length; i++) {
-      let movie = document.createElement("div");
-      let title = document.createElement("h3");
-      let poster = document.createElement("img");
-      let desc = document.createElement("p");
-      let rating = document.createElement("h4");
-
-      title.innerText = movies[i].title;
-      desc.innerText = movies[i].overview;
-      rating.innerText = "Rating: " + movies[i].vote_average + " (of " +
-        movies[i].vote_count + " total votes)";
-      if (movies[i].poster_path != null) { // to avoid a pesky error
-        poster.src = POSTER_URL + movies[i].poster_path;
-        poster.alt = "Movie poster for " + movies[i].title;
-        movie.appendChild(poster);
-      }
-      movie.appendChild(title);
-      movie.appendChild(rating);
-      movie.appendChild(desc);
-      qs("article").appendChild(movie);
-    }
-    return movies.length;
-  }
-
   /* ------------------------------ Helper Functions  ------------------------------ */
   // Note: You may use these in your code, but do remember that your code should not have
   // any functions defined that are unused.
