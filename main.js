@@ -9,7 +9,8 @@
 (function() {
   "use strict";
   const BASE_URL = "colors.php";
-  const ERROR_MSG = "OOPS! An error occured when accessing the the color webservice...";
+  const ERROR_MSG = "OOPS! An error occured when accessing the the color webservice."
+    + "Please try a different color...";
 
   window.addEventListener("load", init);
 
