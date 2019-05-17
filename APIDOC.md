@@ -68,7 +68,7 @@ This API is used to get information about different colors.
 - If `mode` is not json or text, will 400 error with: `Parameter mode must be either json or text!`
 
 ## Get a text representation of a given color (or all colors in the api)
-**Request Format:** colors.php?color={color}&mode=text
+**Request Format:** colors.php?color={color/all}&mode=text
 
 **Request Type:** GET
 
