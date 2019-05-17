@@ -41,10 +41,10 @@ This API is used to get information about different colors.
 - If missing parameter `color` or `mode`, will 400 error with: `Please include both parameters color and mode in your query!`
 - If `mode` is not json or text, will 400 error with: `Parameter mode must be either json or text!`
 
-## Get a JSON object containing a specific color
+## Get a JSON object of a specific color
 **Request Format:** colors.php?color={name}&mode=json
 
-**Request Type**: POST
+**Request Type**: GET
 
 **Returned Data Format**: JSON
 
@@ -53,7 +53,6 @@ This API is used to get information about different colors.
 **Example Request:** colors.php?color=red&mode=json
 
 **Example Response:**
-*Fill in example response in the ticks*
 
 ```json
 {
@@ -65,5 +64,30 @@ This API is used to get information about different colors.
 
 **Error Handling:**
 - If passed in an invalid color name, it will 400 error with: `The color {color} does not exist in my list of colors! Please pass a common color name or simply all.`
+- If missing parameter `color` or `mode`, will 400 error with: `Please include both parameters color and mode in your query!`
+- If `mode` is not json or text, will 400 error with: `Parameter mode must be either json or text!`
+
+## Get a text representation of a given color (or all colors in the api)
+**Request Format:** colors.php?color={color}&mode=text
+
+**Request Type:** GET
+
+**Returned Data Format**: Plain text
+
+**Description:** Returns a string describing the given color (or all colors).
+
+
+**Example Request:** colors.php?color=red&mode=text
+
+**Example Response:**
+
+
+```
+Red is the color at the end of the visible spectrum of light, next to orange and opposite violet. It has a dominant wavelength of approximately 625–740 nanometres. It is a primary color in the RGB color model and the CMYK color model, and is the complementary color of cyan. Reds range from the brilliant yellow-tinged scarlet and vermillion to bluish-red crimson, and vary in shade from the pale red pink to the dark red burgundy. The red sky at sunset results from Rayleigh scattering, while the red color of the Grand Canyon and other geological features is caused by hematite or red ochre, both forms of iron oxide. Iron oxide also gives the red color to the planet Mars. The red colour of blood comes from protein hemoglobin, while ripe strawberries, red apples and reddish autumn leaves are colored by anthocyanins.
+It has RGB-values [255, 0, 0].
+```
+
+**Error Handling:**
+- If passed invalid `color` or not `all`, it will 400 error with a helpful message: `The color {color} does not exist in my list of colors! Please pass a common color name or simply all.`
 - If missing parameter `color` or `mode`, will 400 error with: `Please include both parameters color and mode in your query!`
 - If `mode` is not json or text, will 400 error with: `Parameter mode must be either json or text!`
